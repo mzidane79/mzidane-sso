@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Engagement Messenger</title>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to the Embedded Engagement Messenger!</h1>
+    </header>
+
+    <section>
+        <p>This is a basic HTML page with embedded ServiceNow Engagement Messenger.</p>
+        <p>Feel free to explore and modify it as you like!</p>
+        <!-- Add a button to launch Engagement Messenger -->
+        <button onclick="launchEngagementMessenger()">Launch Engagement Messenger</button>
+    </section>
+
+    <footer>
+        <!-- Embedded Code will go here -->
+    </footer>
+
+    <script>
+        function launchEngagementMessenger() {
+            // Replace the following values with your actual ServiceNow Engagement Messenger and SSO configuration
+            const engagementMessengerBaseUrl = 'https://your-instance.service-now.com';
+            const ssoToken = 'your_sso_token';  // You need to obtain this from your SSO authentication process
+
+            // Open Engagement Messenger with SSO token
+            window.location.href = `${engagementMessengerBaseUrl}/$sn-engagement-messenger.do?sysparm_sso_token=${ssoToken}`;
+        }
+    </script>
+
+</body>
+</html>
